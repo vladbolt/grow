@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ASMT feedback: CSS - clearfix</title>
+</head>
+<style type="text/css" media="screen">
+/* ====== #1 ====== */
+
+.wrapper:after {
+    /* content: "";
+  clear: both;
+  display: table; */
+}
+
+
+/* ====== #2 ====== */
+
+.clearfix {
+  /*clear: both; */
+}
+
+
+/* ====== #3 ====== */
+
+.wrapper {
+ /*overflow: auto; */
+}
+
+
+/* ====== #4 ====== */
+
+.wrapper:after {
+/* visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; */
+}
+
+
+/* ====== #5 ====== */
+
+.wrapper {
+  /*display: flow-root; */
+}
+
+
+/* 
+  ====== Serve classes ======
+*/
+
+div {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.left,
+.right {
+    vertical-align: top;
+    background: #bbb;
+    width: 25%;
+    padding: 20px 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.bottom {
+    background: #ddd;
+    padding: 20px 0;
+    width: 50%;
+    margin: 0 auto;
+}
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="left">Left</div>
+        <div class="right">Right</div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="bottom">Bottom</div>
+</body>
+
+</html>
