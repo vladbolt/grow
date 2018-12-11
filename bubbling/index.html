@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ASMT Feedback: JavaScript - Bubbling</title>
+</head>
+<style type="text/css">
+table {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+td {
+    padding: 20px;
+    border: 2px #ddd solid;
+    cursor: pointer;
+}
+
+tr.selected td {
+    background: #f00;
+    border-color: #dd0000;
+    color: #fff;
+}
+</style>
+
+<body>
+    <table id="table">
+        <tbody>
+            <tr>
+                <td>1.1</td>
+                <td>1.2</td>
+                <td>1.3</td>
+                <td>1.4</td>
+            </tr>
+            <tr>
+                <td>2.1</td>
+                <td>2.2</td>
+                <td>2.3</td>
+                <td>2.4</td>
+            </tr>
+            <tr>
+                <td>3.1</td>
+                <td>3.2</td>
+                <td>3.3</td>
+                <td>3.4</td>
+            </tr>
+            <tr>
+                <td>4.1</td>
+                <td>4.2</td>
+                <td>4.3</td>
+                <td>4.4</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script type="text/javascript">
+    var tableObj = document.querySelector("#table"),
+        selectedTR = document.createElement("tr");
+
+    tableObj.addEventListener("click", function(e) {
+        selectedTR.classList.remove("selected");
+        selectedTR = e.target.parentNode;
+        selectedTR.classList.add("selected");
+    }, true);
+    </script>
+</body>
+
+</html>
